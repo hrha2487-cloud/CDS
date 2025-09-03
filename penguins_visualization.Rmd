@@ -1,0 +1,91 @@
+---
+title: "Assignment 2: Visualization"
+author: Ruihan He
+date: "`9-3-2025`"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    toc: false
+    df_print: kable
+    fig_caption: false
+    number_sections: false
+    dev: pdf
+    highlight: tango
+  html_document:
+    theme: default
+    self_contained: true
+    toc: false
+    df_print: kable
+    fig_caption: false
+    number_sections: false
+    smart: true
+    dev: svg
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = TRUE,
+  eval = TRUE,
+  fig.width = 5,
+  fig.asp = 0.618,
+  out.width = "70%",
+  dpi = 120,
+  fig.align = "center",
+  cache = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+## Exercise 1
+```{r}
+library(palmerpenguins)
+data(penguins) 
+# View the structure of the dataset 
+str(penguins)
+```
+
+Number of rows and columns: 344 rows, 8 columns.
+Each row represents an observation of a penguin.
+Categorical variables: species, island, sex.
+Continuous variables: bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g.
+Variable that could be categorical or continuous: year.
+Species included: Adelie, Chinstrap, Gentoo.
+
+## Exercise 2
+```{r}
+library(ggplot2)
+ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram()
+```
+
+## Exercise 3
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram(bins = 10)  # fewer bins
+ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram(bins = 40)  # more bins
+```
+
+## Exercise 4
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + geom_point()
+```
+
+## Exercise 5
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) + geom_point()
+```
+
+
+## Exercise 6
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) + geom_point() +
+geom_smooth(method = "lm", se = FALSE)
+```
+
+## Exercise 7
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) + geom_point()
+```
+
