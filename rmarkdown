@@ -1,0 +1,60 @@
+---
+title: "Assignment 1: R Markdown practice"
+author: "Ruihan He"
+date: "`2025-8-27`"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    toc: false
+    df_print: kable
+    fig_caption: false
+    number_sections: true
+    dev: pdf
+    highlight: tango
+  html_document:
+    theme: paper
+    self_contained: true
+    toc: false
+    df_print: kable
+    fig_caption: false
+    number_sections: true
+    smart: true
+    dev: svg
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+# Get GitHub username
+if (.Platform$OS.type == "unix") {
+  git_remote <- system('git config --get remote.origin.url', intern = TRUE)
+  git_user <- (strsplit(git_remote, "assignment-1-") |> unlist())[2]
+} else {
+  git_remote <- shell('git config --get remote.origin.url', intern = TRUE)
+  git_user <- (strsplit(git_remote, "assignment-1-") |> unlist())[2]
+}
+```
+
+---
+subtitle: "GitHub username: `hrha2487`"
+---
+
+Hello World!
+
+- Use GitHub for creating a reproducible research document.  
+  - My GitHub username is: *hrha2487*  
+  - Visit [GitHub](https://github.com) for more information.
+
+
+### Running R code in a code chunk
+
+```{r}
+ # Simple arithmetic
+x <- 2 + 4
+x + 9
+
+ ### Displaying Graphs
+
+```{r}
+plot(x = iris$Sepal.Length, y = iris$Sepal.Width)
