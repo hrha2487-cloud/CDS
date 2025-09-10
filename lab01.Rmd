@@ -1,0 +1,87 @@
+---
+title: "Lab 1 - Reproducible research with RMarkdown and Github"
+author: "Ruihan He"
+date: "`9-8-2025`"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    toc: false
+    df_print: kable
+    number_sections: no
+    dev: pdf
+    highlight: tango
+    extra_dependencies: ["float"]
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+# Set knitr options
+knitr::opts_chunk$set(
+  echo = TRUE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "80%", dpi = 120,
+  fig.position = "!h", cache = FALSE
+)
+# Load packages
+suppressPackageStartupMessages(library(tidyverse))
+# Get GitHub username
+if (.Platform$OS.type == "unix") {
+  git_remote <- system('git config --get remote.origin.url', intern = TRUE)
+  git_user <- str_extract(git_remote, "lab-1-.+") %>% str_sub(start = 7)
+} else {
+  git_remote <- shell('git config --get remote.origin.url', intern = TRUE)
+  git_user <- str_extract(git_remote, "lab-1-.+") %>% str_sub(start = 7)
+}
+```
+
+---
+subtitle: "GitHub username: `hrha2487`"
+---
+
+---
+
+## Exercise 2
+
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| -------- | :------- | :------: | -------: |
+| a        | b        | c        | d        |
+
+
+Both tables render properly, but the alignment is different.
+
+In the second table, the first column is left-aligned and the second column is right-aligned.
+
+The colons inside the separator row control alignment.
+
+
+
+## Exercise 3
+
+![Image caption](knitting-process.png)
+
+
+## Exercise 4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+The indented line is rendered as a code block instead of normal text.
+
+Indentation with four spaces tells RMarkdown to treat the line as code.
+
+This can be confusing for readers, because plain text may accidentally look like code.
+
+## Exercise 5
+
+$c = \sqrt{a^2 + b^2}$
+
+
+## Exercise 6
+
+```{r, warning = FALSE}
+qplot(x = sleep_total, y = sleep_rem, data = msleep)
+```
+
+
