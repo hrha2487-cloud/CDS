@@ -1,0 +1,130 @@
+---
+title: "Assignment 3: Volcanic Eruptions"
+author: Ruihan He
+date: "`9-9-2025`"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    toc: false
+    df_print: tibble
+    fig_caption: false
+    number_sections: false
+    dev: pdf
+    highlight: tango
+  html_document:
+    theme: default
+    self_contained: true
+    toc: false
+    df_print: tibble
+    fig_caption: false
+    number_sections: false
+    smart: true
+    dev: svg
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+knitr::opts_chunk$set(
+  echo = TRUE,
+  eval = TRUE,
+  fig.width = 5,
+  fig.asp = 0.618,
+  out.width = "70%",
+  dpi = 120,
+  fig.align = "center",
+  cache = FALSE
+)
+# Load required packages
+suppressPackageStartupMessages(library(tidyverse))
+```
+
+## Exercise 1
+
+```{r}
+eruptions <- read_csv("eruptions_dataset.csv")
+```
+CSV is a text data format that uses commas to separate delimiter-separated values, and newlines to separate records.(Wikipedia)
+
+## Exercise 2
+The dataset contains 103 rows and 16 columns.
+Each row represents a recorded volcanic eruption event.
+Elevation is measured in meters.
+15 years.
+
+## Exercise 3
+
+```{r}
+eruptions %>%
+  select(name, elevation)
+```
+
+```{r}
+eruptions %>%
+  select(name:elevation)
+```
+
+This code returns a data frame containing only the name and elevation columns from the original eruptions dataset, leaving out all the other columns.
+It’s a shortcut for selecting consecutive columns without typing each one.
+```{r}
+eruptions_stored <- eruptions %>%
+  select(name, elevation)
+```
+The assignment operator <- stores the result of the expression on the right into a new variable on the left. Because we assigned the result to eruptions_stored, the code chunk no longer prints the data frame to the screen automatically; instead it saves it for later use.
+
+## Exercise 4
+```{r}
+eruptions %>%
+  arrange(year, month)
+```
+
+```{r}
+eruptions %>%
+  arrange(month, year)
+```
+
+Yes, the order of the variables inside arrange() matters. The data are sorted first by the first column you list, and then (within ties) by the second column, and so on. Changing the order of the variables changes how the data are grouped and displayed.
+
+## Exercise 5
+```{r}
+eruptions %>%
+  arrange(desc(name))
+```
+
+This sorts the volcano names from “Z…” down to “A…”.
+The recorded activity at the Yellowstone Caldera occurred on June 9, 2016.
+
+## Exercise 6
+```{r}
+eruptions_stored %>%
+  mutate(elevation_yards = elevation * 1.093)
+```
+By default mutate() places the new column at the far right (last column) of the data frame.
+The new column is named elevation_yards.
+The part before the equals sign inside mutate()—elevation_yards = …—is what names the new column.
+
+
+## Exercise 7
+
+```{r}
+eruptions %>%
+  filter(is.na(damage) & longitude < 0)
+```
+
+```{r}
+eruptions %>%
+  filter(is.na(damage) | longitude < 0)
+```
+The first code uses & (logical AND): a row must satisfy both conditions to be included.
+
+The second code uses | (logical OR): a row is included if it satisfies either condition.
+
+## Exercise 8
+
+
+
+## Exercise 9
+
+
+
