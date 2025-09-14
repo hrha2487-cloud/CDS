@@ -98,7 +98,9 @@ The recorded activity at the Yellowstone Caldera occurred on June 9, 2016.
 ## Exercise 6
 ```{r}
 eruptions_stored %>%
-  mutate(elevation_yards = elevation * 1.093)
+  mutate(
+    elevation_yards = elevation * 1.093
+  )
 ```
 By default mutate() places the new column at the far right (last column) of the data frame.
 The new column is named elevation_yards.
@@ -121,8 +123,32 @@ The first code uses & (logical AND): a row must satisfy both conditions to be in
 The second code uses | (logical OR): a row is included if it satisfies either condition.
 
 ## Exercise 8
+```{r}
+eruptions %>% 
+  group_by(country) %>%
+  summarise(
+    average_deaths = mean(deaths, na.rm = TRUE)
+  )
+```
 
+```{r}
+eruptions %>% 
+  group_by(country) %>%
+  summarise(
+    average_deaths = mean(deaths, na.rm = TRUE),
+    total_deaths   = sum(deaths, na.rm = TRUE)
+  )
+```
 
+```{r}
+eruptions %>% 
+  group_by(country) %>%
+  summarise(
+    average_deaths = mean(deaths, na.rm = TRUE),
+    total_deaths   = sum(deaths, na.rm = TRUE)
+  ) %>%
+  arrange(average_deaths)
+```
 
 ## Exercise 9
 
