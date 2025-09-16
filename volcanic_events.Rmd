@@ -1,7 +1,12 @@
 ---
 title: "Assignment 3: Volcanic Eruptions"
+<<<<<<< HEAD
 author: Ruihan He
 date: "`9-9-2025`"
+=======
+author: FirstName LastName
+date: "`r Sys.Date()`"
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 documentclass: article
 geometry: margin=1in
 fontsize: 11pt
@@ -42,6 +47,7 @@ suppressPackageStartupMessages(library(tidyverse))
 
 ## Exercise 1
 
+<<<<<<< HEAD
 ```{r}
 eruptions <- read_csv("eruptions_dataset.csv")
 ```
@@ -182,4 +188,39 @@ eruptions %>%
 ```
 After pivot_wider(), the year columns are named with characters, not numeric literals. Writing select(country, 2010) treats 2010 as the number 2010, not as a column name, so dplyr throws an error saying it can’t find that variable.
 Putting backticks around the column name (`2010`) tells R to treat it as the literal name of a column, even though it starts with a number. This is the standard way to refer to non-syntactic column names in R. After adding backticks, select() correctly selects the column for the year 2010.
+=======
+
+
+## Exercise 2
+
+
+
+## Exercise 3
+
+
+
+## Exercise 4
+
+
+
+## Exercise 5
+
+
+
+## Exercise 6
+
+
+
+## Exercise 7
+
+
+
+## Exercise 8
+
+
+
+## Exercise 9
+
+
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 
