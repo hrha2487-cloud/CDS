@@ -41,7 +41,10 @@ knitr::opts_chunk$set(
 ```
 
 ## Exercise 1
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 ```{r}
 library(palmerpenguins)
 data(penguins) 
@@ -50,6 +53,7 @@ str(penguins)
 ```
 
 Number of rows and columns: 344 rows, 8 columns.
+<<<<<<< HEAD
 
 Each row represents an observation of a penguin.
 
@@ -63,10 +67,20 @@ Species included: Adelie, Chinstrap, Gentoo.
 
 ## Exercise 2
 
+=======
+Each row represents an observation of a penguin.
+Categorical variables: species, island, sex.
+Continuous variables: bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g.
+Variable that could be categorical or continuous: year.
+Species included: Adelie, Chinstrap, Gentoo.
+
+## Exercise 2
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 ```{r}
 library(ggplot2)
 ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram()
 ```
+<<<<<<< HEAD
 
 The x-axis shows flipper length (mm).
 
@@ -76,10 +90,18 @@ The distribution is bimodal.
 
 ## Exercise 3
 
+=======
+The x-axis shows flipper length (mm).
+The numbers on the axis represent values of flipper length.
+The distribution is bimodal.
+
+## Exercise 3
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 ```{r}
 ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram(bins = 10)  # fewer bins
 ggplot(penguins, aes(x = flipper_length_mm)) + geom_histogram(bins = 40)  # more bins
 ```
+<<<<<<< HEAD
 
 With fewer bins → the histogram looks smoother but shows less detail.
 
@@ -134,4 +156,40 @@ Adelie: shorter bills and medium body mass.
 
 Chinstrap: long bills but lighter body mass.
 
+=======
+With fewer bins → the histogram looks smoother but shows less detail.
+With more bins → the histogram looks noisier but reveals more detail.
+Increasing the number of bins makes the two-peak pattern easier to see.
+
+## Exercise 4
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + geom_point()
+```
+The y-axis represents body mass (g).
+There is a positive relationship between flipper length and body mass.
+The relationship is roughly linear.
+
+## Exercise 5
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) + geom_point()
+```
+The correlation between bill length and body mass is weaker than the correlation between flipper length and body mass.
+The points are more scattered, and the trend is less obvious.
+
+## Exercise 6
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) + geom_point() + geom_smooth(method = "lm", se = FALSE)
+```
+Adding a trend line makes the overall pattern clearer.
+However, it may also hide differences among species.
+
+## Exercise 7
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) + geom_point()
+```
+Coloring by species makes the relationship easier to understand:
+Gentoo: longer bills and heavier body mass.
+Adelie: shorter bills and medium body mass.
+Chinstrap: long bills but lighter body mass.
+>>>>>>> ad3cda47fa5831bcdb06b0bbb914f6e483aa2cd6
 Color highlights species-specific patterns that are harder to see otherwise.
