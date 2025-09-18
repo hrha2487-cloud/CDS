@@ -37,7 +37,10 @@ streaming <- read_csv("streaming.csv")
 
 ### Exercise 1
 
-
+```{r}
+qplot(x = im_db, binwidth = 0.5, data = streaming)
+```
+The histogram simplifies the raw im_db data into an easily interpretable visual, highlighting where most ratings concentrate and how they spread across possible values.
 
 
 ### Exercise 2
