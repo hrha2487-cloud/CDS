@@ -1,0 +1,84 @@
+---
+title: "Lab 2: Exploration by visualization: the streaming movies dataset"
+author: "Ruihan He"
+date: "9-18-2025"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    highlight: tango
+    toc: false
+    df_print: kable
+    fig_caption: no
+    number_sections: no
+    dev: pdf
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+# Set knitr options
+knitr::opts_chunk$set(
+  echo = TRUE, eval = TRUE, fig.width = 5,
+  fig.asp = 0.618, out.width = "80%", dpi = 120,
+  fig.align = "center", cache = FALSE
+)
+
+# Load packages
+suppressPackageStartupMessages(library(tidyverse))
+
+# Load dataset
+streaming <- read_csv("streaming.csv")
+```
+
+* * *
+
+## Visualization by example
+
+### Exercise 1
+
+
+
+
+### Exercise 2
+
+
+
+
+### Exercise 3
+
+
+
+
+### Exercise 4
+
+
+
+
+
+### Exercise 5
+
+
+
+
+### Exercise 6
+
+
+
+
+
+### Exercise 7
+
+
+
+
+
+### Exercise 8
+
+  
+
+
+### Exercise 9
+
+
+
