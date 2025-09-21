@@ -49,7 +49,12 @@ rideable_type member_causal
 Each row = one bike trip.
 
 ## Exercise 2
-
+```{r}
+bikeshare <- bikeshare %>%
+  mutate(
+    duration = ended_at - started_at
+  )
+```
 
 
 
