@@ -91,7 +91,21 @@ Box plot highlights the median, quartiles, and extreme values more clearly.
 
 
 ## Exercise 5
-
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, y = "")) +
+  geom_violin() +
+  labs(
+    title = "Violin Plot of Capital Bikeshare Trip Durations",
+    x = "Duration (seconds)"
+  )
+```
+Center: The middle, widest part of the violin corresponds roughly to the median trip duration, indicating that most trips are relatively short.
+Shape: The distribution is clearly right-skewed, with a few very long trips creating a long tail on the right side.
+Comparison with previous plots:
+The histogram and box plot also show the right-skewed distribution.
+Compared to the histogram, the violin plot more clearly shows the density of short trips and the sparsity of long trips.
+Compared to the box plot, the violin plot shows not only the median and quartiles but also the continuous density of the data.
 
 
 ## Exercise 6
