@@ -58,8 +58,10 @@ From the histogram, it is clear that most movies in the database are in English.
 
 
 ### Exercise 3
-
-
+The distribution of English appears roughly symmetric or slightly left-skewed, with most ratings clustered in the mid-range. Its modality is unimodal, centered around 6–7.
+The distribution of Foreign is slightly right-skewed, with a concentration of ratings in the 6–8 range and a noticeable number of films rated above 8. Its modality is unimodal,a peak around 7–7.5.
+English films dominate the dataset numerically, but Foreign films tend to be rated more favorably on average.
+Yes. Because it will be influenced by factors such as selection bias, cultural perception and personal preferences.
 
 
 ### Exercise 4
