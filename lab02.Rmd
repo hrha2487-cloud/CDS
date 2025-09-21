@@ -98,15 +98,14 @@ The basic association looks similar for both English and foreign-language movies
 
 ### Exercise 7
 ```{r}
-qplot(
-  x = rotten_tomatoes, 
-  y = im_db, 
-  geom = "smooth", 
-  method = "lm", 
-  data = streaming
-  )
+library(ggplot2)
+
+ggplot(streaming, aes(x = rotten_tomatoes, y = im_db)) +
+  geom_point() +
+  facet_wrap(~ age)   # or facet_wrap(~age_rating) depending on your variable name
+
 ```
-Yes.
+The faceted view doesn’t show a fundamentally different relationship from the colored view.
 
 
 
