@@ -97,7 +97,16 @@ The basic association looks similar for both English and foreign-language movies
 
 
 ### Exercise 7
-
+```{r}
+qplot(
+  x = rotten_tomatoes, 
+  y = im_db, 
+  geom = "smooth", 
+  method = "lm", 
+  data = streaming
+  )
+```
+Yes.
 
 
 
