@@ -79,10 +79,11 @@ Variable faceted over: Age rating category
 Facet with most movies: “18+”
 
 
-
 ### Exercise 5
-
-
+```{r}
+qplot(x = rotten_tomatoes, y = im_db, data = streaming)
+```
+As Rotten Tomatoes ratings increase, IMDb ratings also tend to increase in a roughly linear pattern. Movies with very low Rotten Tomatoes scores generally have lower IMDb scores, while movies with very high Rotten Tomatoes scores tend to have higher IMDb scores. This suggests that the two ratings systems are positively associated.
 
 
 ### Exercise 6
