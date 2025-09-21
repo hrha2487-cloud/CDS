@@ -57,9 +57,14 @@ bikeshare <- bikeshare %>%
 ```
 
 
-
 ## Exercise 3
-
+```{r}
+bikeshare %>%
+  ggplot() +
+  geom_histogram(mapping = aes(x = duration)) +
+  labs(title = "Distribution of Capital Bikeshare Trip Durations", x = "Duration (seconds)")
+```
+The histogram shows that most Capital Bikeshare trips are short, but there is a long tail of longer trips, resulting in a right-skewed distribution.
 
 
 ## Exercise 4
