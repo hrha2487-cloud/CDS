@@ -87,9 +87,13 @@ As Rotten Tomatoes ratings increase, IMDb ratings also tend to increase in a rou
 
 
 ### Exercise 6
+```{r}
+library(ggplot2)
 
-
-
+ggplot(streaming, aes(x = rotten_tomatoes, y = im_db, color = main_language)) +
+  geom_point()
+```
+The basic association looks similar for both English and foreign-language movies, but the spread and density of the points differ.
 
 
 ### Exercise 7
