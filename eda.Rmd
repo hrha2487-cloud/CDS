@@ -68,7 +68,26 @@ The histogram shows that most Capital Bikeshare trips are short, but there is a 
 
 
 ## Exercise 4
+```{r}
+library(ggplot2)
+library(dplyr)
 
+bikeshare %>%
+  ggplot() +
+  geom_boxplot(aes(y = duration)) +
+  labs(
+    title = "Box Plot of Capital Bikeshare Trip Durations",
+    y = "Duration (seconds)"
+  )
+```
+Box plot code was adapted from https://r-graph-gallery.com/boxplot.html. 
+I modified it to use the bikeshare dataframe and the duration variable.
+
+Center: The middle line of the box shows the median duration.
+Skewness: The box plot is right-skewed, just like the histogram, because there are some very long trips.
+Comparison to histogram:
+Both show right skew.
+Box plot highlights the median, quartiles, and extreme values more clearly.
 
 
 ## Exercise 5
