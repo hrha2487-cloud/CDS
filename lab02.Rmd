@@ -45,7 +45,16 @@ The histogram simplifies the raw im_db data into an easily interpretable visual,
 
 ### Exercise 2
 
-
+```{r}
+qplot(
+  x = im_db, 
+  binwidth = 0.5, 
+  fill = main_language,
+  data = streaming
+  )
+```
+Adding fill = main_language to the histogram code created a stacked histogram where each bar (representing a bin of IMDb ratings) is divided into colored segments based on the main_language variable. 
+From the histogram, it is clear that most movies in the database are in English.
 
 
 ### Exercise 3
