@@ -65,8 +65,18 @@ Yes. Because it will be influenced by factors such as selection bias, cultural p
 
 
 ### Exercise 4
+```{r}
+qplot(
+  x = im_db, 
+  binwidth = 0.5, 
+  facets = ~ age,
+  data = streaming
+  )
+```
 
-
+Facets: 5
+Variable faceted over: Age rating category
+Facet with most movies: “18+”
 
 
 
