@@ -125,6 +125,21 @@ Yes.
 
 
 ### Exercise 9
+```{r}
+library(ggplot2)
 
+ggplot(streaming, aes(x = rotten_tomatoes, y = im_db)) +
+  geom_point() +             # scatter plot of individual movies
+  geom_smooth(method = "lm") # add linear regression line with confidence interval
+
+```
+
+```{r}
+ggplot(streaming, aes(x = rotten_tomatoes, y = im_db)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~ age)   # or ~age_rating depending on your variable name
+
+```
 
 
