@@ -44,14 +44,12 @@ bikeshare <- readRDS("bikeshare_data.RDS")
 
 
 ## Exercise 1
-```{r}
-View(bikeshare)
-```
 start_lat  end_lat
 rideable_type member_causal
 Each row = one bike trip.
 
 ## Exercise 2
+
 
 
 
