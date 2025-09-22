@@ -302,6 +302,6 @@ bikeshare %>%
 
 ## Academic Integrity statement
 
-
+I did not use AI tools to complete this assignment.
 
 
