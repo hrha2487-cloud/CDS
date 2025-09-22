@@ -109,6 +109,16 @@ Compared to the box plot, the violin plot shows not only the median and quartile
 
 
 ## Exercise 6
+```{r}
+bikeshare <- bikeshare %>%
+  mutate(
+    min_distance = distHaversine(
+      cbind(start_lng, start_lat), 
+      cbind(end_lng, end_lat)
+      )
+  )
+head(bikeshare)
+```
 
 
 
