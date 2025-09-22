@@ -240,8 +240,42 @@ bikeshare %>%
 Members take the most rides overall.
 
 ## Exercise 10
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, fill = member_casual)) +
+  geom_histogram(bins = 20, alpha = 0.3, position = "identity") +
+  labs(
+    title = "Histogram of Ride Duration by Rider Type",
+    x = "Duration (seconds)",
+    y = "Count",
+    fill = "Rider Type"
+  )
+```
+Ride duration clearly covaries with rider type. Members take the majority of short rides, clustering at lower durations, while casual users are more common among longer rides.
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, y = member_casual)) +
+  geom_violin() +
+  labs(
+    title = "Violin Plot of Ride Duration by Rider Type",
+    x = "Duration (seconds)",
+    y = "Rider Type"
+  )
+```
 
-
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, y = min_distance)) +
+  geom_bin2d() +
+  labs(
+    title = "2-D Histogram of Minimum Distance vs Duration by Rider Type",
+    x = "Duration (seconds)",
+    y = "Minimum Distance (meters)"
+  ) +
+  scale_fill_viridis_c(trans = "log") +
+  facet_wrap(~ member_casual)
+```
+The faceted heatmap shows that casual riders have more rides with long durations but low minimum distances compared to members. This suggests that casual users often take slow or round-trip leisure rides, whereas members’ rides are generally shorter in both duration and distance.
 
 ## Exercise 11
 
