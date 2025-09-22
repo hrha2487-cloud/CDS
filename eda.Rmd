@@ -206,8 +206,38 @@ bikeshare %>%
 
 
 ## Exercise 9
-
-
+```{r}
+bikeshare %>%
+  summarize(
+    mean = mean(duration),
+    median = median(duration),
+    standard_deviation = sd(duration),
+    minimum = min(duration),
+    maximum = max(duration)
+  )
+```
+The histogram and boxplot from Exercise 3 showed a right-skewed distribution with a few very long rides. These extreme values pull the mean upward more than the median, so the mean ride length ends up larger than the median.
+```{r}
+bikeshare %>%
+  group_by(member_casual) %>%
+  summarize(
+    mean = mean(duration),
+    median = median(duration),
+    standard_deviation = sd(duration),
+    minimum = min(duration),
+    maximum = max(duration)
+  )
+```
+Casual users have the longest average ride length.
+Yes.
+```{r}
+bikeshare %>%
+  group_by(member_casual) %>%
+  summarize(
+    n = n()
+  )
+```
+Members take the most rides overall.
 
 ## Exercise 10
 
