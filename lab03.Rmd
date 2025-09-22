@@ -112,8 +112,13 @@ Because date is a Date variable, adding 2 shifts each date forward by two days. 
 
 
 ### Exercise 5
-
-
+```{r}
+coffeeshop_updated <- mutate(
+  coffeeshop, 
+  product_profit = sales - (cogs + total_expenses)
+ )
+```
+The original coffeeshop dataset is unchanged.
 
 
 ### Exercise 6
