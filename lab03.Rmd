@@ -80,7 +80,17 @@ filter(select(coffeeshop, starts_with('prod')), product == "Darjeeling")
 
 
 ### Exercise 3
+```{r}
+coffeeshop %>%
+  mutate(product_profit = sales - (cogs + total_expenses))
+```
 
+
+```{r}
+coffeeshop %>%
+  mutate(sales - (cogs + total_expenses))
+```
+The product_profit = part assigns a name to the new column I'm creating.
 
 
 
