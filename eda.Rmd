@@ -93,8 +93,8 @@ Box plot highlights the median, quartiles, and extreme values more clearly.
 ## Exercise 5
 ```{r}
 bikeshare %>%
-  ggplot(aes(x = duration, y = "")) +
-  geom_violin() +
+  ggplot() +
+  geom_violin(aes(x = duration, y = "")) +
   labs(
     title = "Violin Plot of Capital Bikeshare Trip Durations",
     x = "Duration (seconds)"
@@ -265,8 +265,8 @@ bikeshare %>%
 
 ```{r}
 bikeshare %>%
-  ggplot(aes(x = duration, y = min_distance)) +
-  geom_bin2d() +
+  ggplot() +
+  geom_bin2d(aes(x = duration, y = min_distance)) +
   labs(
     title = "2-D Histogram of Minimum Distance vs Duration by Rider Type",
     x = "Duration (seconds)",
@@ -278,6 +278,24 @@ bikeshare %>%
 The faceted heatmap shows that casual riders have more rides with long durations but low minimum distances compared to members. This suggests that casual users often take slow or round-trip leisure rides, whereas members’ rides are generally shorter in both duration and distance.
 
 ## Exercise 11
+```{r}
+bikeshare <- bikeshare %>%
+  mutate(
+    day_of_week = wday(started_at) 
+  )
+```
+
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, y = min_distance, color = member_casual)) +
+  geom_point(alpha = 0.01) +
+  labs(
+    title = "Ride Duration vs Minimum Distance by Rider Type",
+    x = "Duration (seconds)",
+    y = "Minimum Distance (meters)",
+    color = "Rider Type"
+  )
+```
 
 
 
