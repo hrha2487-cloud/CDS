@@ -54,7 +54,7 @@ coffeeshop$date <- as.Date(coffeeshop$date)
 ```{r}
 select(coffeeshop, !cogs)
 ```
-Quickly remove a column you don’t need while keeping all others.
+Quickly remove a column which don’t need while keeping all others.
 ```{r}
 select(coffeeshop, starts_with('prod'))
 ```
@@ -66,7 +66,7 @@ Useful for partial matching to extract relevant columns.
 ```{r}
 select(coffeeshop, caffeination = type)
 ```
-Allows you to rename a column while selecting it, making the output clearer or more meaningful.
+Allows to rename a column while selecting it, making the output clearer or more meaningful.
 
 ### Exercise 2
 ```{r}
@@ -122,7 +122,22 @@ The original coffeeshop dataset is unchanged.
 
 
 ### Exercise 6
-
+```{r}
+coffeeshop_updated %>%
+  group_by(product) %>%
+  summarize(avg_profit = mean(product_profit))
+```
+Colombian
+```{r}
+coffeeshop %>%
+  group_by(market) %>%
+  summarize(
+    total_profit = sum(sales - (cogs + total_expenses)),
+    total_sales = sum(sales),
+    profit_margin = total_profit / total_sales
+    )
+```
+East
 
 
 
