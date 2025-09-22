@@ -123,6 +123,38 @@ head(bikeshare)
 
 
 ## Exercise 7
+```{r hist-min-distance}
+bikeshare %>%
+  ggplot(aes(x = min_distance)) +
+  geom_histogram() +
+  labs(
+    title = "Histogram of Minimum Ride Distances",
+    x = "Minimum Distance (meters)"
+  )
+```
+
+```{r boxplot-min-distance}
+bikeshare %>%
+  ggplot(aes(y = min_distance)) +
+  geom_boxplot() +
+  labs(
+    title = "Box Plot of Minimum Ride Distances",
+    y = "Minimum Distance (meters)"
+  )
+```
+
+```{r violin-min-distance}
+bikeshare %>%
+  ggplot(aes(x = min_distance, y = "")) +
+  geom_violin() +
+  labs(
+    title = "Violin Plot of Minimum Ride Distances",
+    x = "Minimum Distance (meters)"
+  )
+```
+The distribution of the minimum ride distances is highly right-skewed. Most rides have very short minimum distances, and there are a small number of rides with much larger minimum distances, producing a long tail to the right.
+
+The center of the distribution is at a relatively low distance.
 
 
 
