@@ -302,6 +302,6 @@ bikeshare %>%
 
 ## Academic Integrity statement
 
-I did not use AI tools to complete this assignment.
+ChatGPT was used to help complete this assignment in accordance with the AI policies in the syllabus. A full transcript of my entire conversation can be found at https://chat.openai.com/share/12e3c048-3b36-4c98-b191-d00313dea219
 
 
