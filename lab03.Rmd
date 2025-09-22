@@ -51,9 +51,22 @@ coffeeshop$date <- as.Date(coffeeshop$date)
 
 
 ### Exercise 1
-
-
-
+```{r}
+select(coffeeshop, !cogs)
+```
+Quickly remove a column you don’t need while keeping all others.
+```{r}
+select(coffeeshop, starts_with('prod'))
+```
+Conveniently extract all product-related columns at once without listing them individually.
+```{r}
+select(coffeeshop, contains("pe"))
+```
+Useful for partial matching to extract relevant columns.
+```{r}
+select(coffeeshop, caffeination = type)
+```
+Allows you to rename a column while selecting it, making the output clearer or more meaningful.
 
 ### Exercise 2
 
