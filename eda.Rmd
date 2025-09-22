@@ -159,7 +159,50 @@ The center of the distribution is at a relatively low distance.
 
 
 ## Exercise 8
+```{r}
+bikeshare %>%
+  ggplot() +
+  geom_point(aes(x = duration, y = min_distance)) +
+  labs(
+    title = "Scatter plot of minimum distance vs. duration",
+    x = "Duration (seconds)",
+    y = "Minimum distance (meters)"
+  )
+```
 
+```{r}
+bikeshare %>%
+  ggplot(aes(x = duration, y = min_distance)) +
+  geom_point(alpha = 0.01) +
+  labs(
+    title = "Scatter plot of minimum distance vs. duration (transparent points)",
+    x = "Duration (seconds)",
+    y = "Minimum distance (meters)"
+  )
+```
+
+```{r}
+bikeshare %>%
+  ggplot() +
+  geom_bin2d(aes(x = duration, y = min_distance)) +
+  labs(
+    title = "2-D histogram of minimum distance vs. duration",
+    x = "Duration (seconds)",
+    y = "Minimum distance (meters)"
+  )
+```
+
+```{r}
+bikeshare %>%
+  ggplot() +
+  geom_bin2d(aes(x = duration, y = min_distance)) +
+  labs(
+    title = "2-D histogram of minimum distance vs. duration (log color scale)",
+    x = "Duration (seconds)",
+    y = "Minimum distance (meters)"
+  ) +
+  scale_fill_viridis_c(trans = "log")
+```
 
 
 ## Exercise 9
