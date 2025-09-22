@@ -95,9 +95,20 @@ The product_profit = part assigns a name to the new column I'm creating.
 
 
 ### Exercise 4
+```{r}
+coffeeshop %>%
+  mutate(product_profit = sales - (cogs + total_expenses))
+```
 
-
-
+```{r mutate-profit-expiration}
+coffeeshop %>%
+  mutate(
+    product_profit = sales - (cogs + total_expenses),
+    expiration_date = date + 2
+  )
+```
+It now has two new columns instead of one. In addition to product_profit, it also contains a new column called expiration_date created from the date column.
+Because date is a Date variable, adding 2 shifts each date forward by two days. So expiration_date shows the date two days after the original date in each row.
 
 
 ### Exercise 5
