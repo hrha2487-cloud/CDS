@@ -69,8 +69,13 @@ select(coffeeshop, caffeination = type)
 Allows you to rename a column while selecting it, making the output clearer or more meaningful.
 
 ### Exercise 2
+```{r}
+select(coffeeshop, caffeination = type)
+```
 
-
+```{r}
+filter(select(coffeeshop, starts_with('prod')), product == "Darjeeling")
+```
 
 
 
