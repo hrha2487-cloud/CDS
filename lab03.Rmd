@@ -140,10 +140,18 @@ coffeeshop %>%
 East
 
 
-
-
 ### Exercise 7
-
+```{r}
+coffeeshop %>%
+  group_by(product_line, type) %>%
+  summarize(
+    total_profit = sum(sales - (cogs + total_expenses)),
+    total_sales = sum(sales),
+    profit_margin = total_profit / total_sales
+    )
+```
+Group according to different types.
+While Regular products generally yield higher profitability ratios, Decaf products can sometimes generate significant total profit due to volume.
 
 
 
