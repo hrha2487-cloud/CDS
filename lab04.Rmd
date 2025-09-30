@@ -52,6 +52,10 @@ brauer <- read_rds("brauer2008.rds")
 ## Prune the dataset
 
 ### Exercise 1
+```{r}
+brauer2 <- brauer %>%
+  select(-GID, -YORF, -GWEIGHT)
+```
 
 
 
