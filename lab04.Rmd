@@ -55,6 +55,7 @@ brauer <- read_rds("brauer2008.rds")
 ```{r}
 brauer2 <- brauer %>%
   select(-GID, -YORF, -GWEIGHT)
+head(brauer2)
 ```
 
 
@@ -69,6 +70,7 @@ brauer3 <- brauer2 %>%
   pivot_longer(cols = G0.05:U0.3,
                names_to = "sample",
                values_to = "expression")
+head(brauer3)
 ```
 
 
@@ -77,6 +79,16 @@ brauer3 <- brauer2 %>%
 ## Enforcing one column per variable and one value per cell
 
 ### Exercise 3
+```{r}
+brauer4 <- brauer3 %>%
+  separate(
+    col = sample,
+    into = c("nutrient", "rate"),
+    sep = 1, 
+    convert = TRUE 
+  )
+head(brauer4)
+```
 
 
 
