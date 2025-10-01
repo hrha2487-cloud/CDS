@@ -106,7 +106,6 @@ brauer5 <- brauer4 %>%
 
 ### Exercise 5
 ```{r}
-library(stringr)
 brauer_tidy <- brauer5 %>%
   mutate_at(
     vars(gene_name:systematic_id), 
