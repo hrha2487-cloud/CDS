@@ -60,9 +60,16 @@ brauer2 <- brauer %>%
 
 
 
+
 ## Enforcing one observation per row
 
 ### Exercise 2
+```{r}
+brauer3 <- brauer2 %>%
+  pivot_longer(cols = G0.05:U0.3,
+               names_to = "sample",
+               values_to = "expression")
+```
 
 
 
