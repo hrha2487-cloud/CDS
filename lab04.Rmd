@@ -119,5 +119,22 @@ brauer_tidy <- brauer5 %>%
 ## Visualizations using the tidy dataset
 
 ### Exercise 6
+```{r}
+library(ggplot2)
+
+brauer_tidy %>%
+  filter(gene_name == "LEU1") %>%
+  ggplot(aes(x = rate, 
+             y = expression, 
+             color = nutrient, 
+             group = nutrient)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Expression of LEU1 under different nutrients and growth rates",
+    x = "Growth Rate",
+    y = "Expression Level"
+  ) 
+```
 
 
