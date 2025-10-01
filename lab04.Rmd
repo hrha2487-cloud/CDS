@@ -69,7 +69,6 @@ brauer3 <- brauer2 %>%
   pivot_longer(cols = G0.05:U0.3,
                names_to = "sample",
                values_to = "expression")
-head(brauer3)
 ```
 
 
@@ -86,7 +85,6 @@ brauer4 <- brauer3 %>%
     sep = 1, 
     convert = TRUE 
   )
-head(brauer4)
 ```
 
 
@@ -101,13 +99,20 @@ brauer5 <- brauer4 %>%
              "molecular_function", "systematic_id", "number"),
     sep = "\\|\\|"
   )
-head(brauer5)
 ```
 
 
 
 
 ### Exercise 5
+```{r}
+library(stringr)
+brauer_tidy <- brauer5 %>%
+  mutate_at(
+    vars(gene_name:systematic_id), 
+    str_trim
+  )
+```
 
 
 
