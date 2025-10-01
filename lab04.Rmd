@@ -55,7 +55,6 @@ brauer <- read_rds("brauer2008.rds")
 ```{r}
 brauer2 <- brauer %>%
   select(-GID, -YORF, -GWEIGHT)
-head(brauer2)
 ```
 
 
@@ -94,6 +93,15 @@ head(brauer4)
 
 
 ### Exercise 4
+```{r}
+brauer5 <- brauer4 %>%
+  separate(
+    col = NAME,
+    into = c("gene_name", "biological_process", 
+             "molecular_function", "systematic_id", "number"),
+    sep = "\\|\\|"
+  )
+```
 
 
 
