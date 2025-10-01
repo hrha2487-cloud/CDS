@@ -101,6 +101,7 @@ brauer5 <- brauer4 %>%
              "molecular_function", "systematic_id", "number"),
     sep = "\\|\\|"
   )
+head(brauer5)
 ```
 
 
