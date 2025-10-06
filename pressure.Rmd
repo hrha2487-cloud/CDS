@@ -79,6 +79,9 @@ blood_pressure_updated <- blood_pressure %>%
 
 
 ## Exercise 4
+```{r}
+systol_urban_frac_model <- lm(Systol ~ urban_frac_life, data = blood_pressure_updated)
+```
 
 
 
