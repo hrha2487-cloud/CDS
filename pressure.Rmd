@@ -166,7 +166,7 @@ The histogram of residuals is roughly symmetric, suggesting that the residuals a
 The vertical spread of points around the regression line appears roughly uniform across all values of Weight. This indicates that the model meets the constant variability assumption.
 
 ## Exercise 12
-
+The first model using urban_frac_life had an R² of 0.05, explaining only a small portion of the variability in Systol. The second model using Weight had a higher R² of 0.35, explaining much more of the variability.Both models reasonably satisfy the three key linear regression assumptions—linearity, nearly normal residuals, and constant variability—but the Weight model is clearly superior in terms of predictive power.
 
 
 
