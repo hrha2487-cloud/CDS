@@ -133,7 +133,11 @@ ii.The histogram suggests that the residuals are nearly normal, because they for
 
 
 ## Exercise 10
-
+```{r}
+systol_weight_model <- lm(Systol ~ Weight, data = blood_pressure_updated)
+```
+The R² value for the urban_frac_life model is 0.05, while the R² for the Weight model is 0.35.
+This indicates that the Weight model predicts Systol better than the urban_frac_life model.
 
 
 
