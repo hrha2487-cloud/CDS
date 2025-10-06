@@ -127,7 +127,8 @@ The points above and below the line are roughly evenly spread across the range o
 
 
 ## Exercise 9
-
+i.The residuals are roughly symmetric and centered around zero.
+ii.The histogram suggests that the residuals are nearly normal, because they form a roughly bell-shaped distribution around zero. This indicates that the prediction errors are evenly distributed, satisfying the second condition for a reliable linear regression model.
 
 
 
