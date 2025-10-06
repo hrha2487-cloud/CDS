@@ -64,7 +64,8 @@ blood_pressure %>%
 
 
 ## Exercise 2
-
+i.The Years variable has a positive correlation with Systol.
+ii.The variable that shows a moderate to strong positive correlation with Systol is Weight.
 
 
 
