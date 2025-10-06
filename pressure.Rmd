@@ -44,9 +44,23 @@ suppressPackageStartupMessages(library(modelr))
 blood_pressure <- read_rds("blood_pressure.rds")
 ```
 
-## Exercise 1
+## Exercise 1 
+```{r, fig.asp = 1, fig.width = 8, out.width = "100%"}
+blood_pressure %>%
+  pivot_longer(cols = Age:Pulse, names_to = "measurement", values_to = "value") %>%
+  ggplot() +
+    geom_point(mapping = aes(x = value, y = Systol)) +
+    facet_wrap(~ measurement, scales = "free_x")
+```
 
-
+```{r, fig.asp = 1, fig.width = 8, out.width = "100%"}
+blood_pressure %>%
+  pivot_longer(cols = Age:Pulse, names_to = "measurement", values_to = "value") %>%
+  ggplot() +
+    geom_point(mapping = aes(x = value, y = Systol)) +
+    geom_smooth(mapping = aes(x = value, y = Systol), method = "lm") +
+    facet_wrap(~ measurement, scales = "free_x")
+```
 
 
 ## Exercise 2
