@@ -70,6 +70,10 @@ ii.The variable that shows a moderate to strong positive correlation with Systol
 
 
 ## Exercise 3
+```{r}
+blood_pressure_updated <- blood_pressure %>%
+  mutate(urban_frac_life = Years / Age)
+```
 
 
 
