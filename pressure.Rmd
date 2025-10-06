@@ -112,6 +112,11 @@ ii.resid
 
 
 ## Exercise 7
+```{r}
+ggplot(systol_urban_frac_df) +
+  geom_point(mapping = aes(x = urban_frac_life, y = Systol)) +
+  geom_abline(slope = systol_urban_frac_model$coefficients[2], intercept = systol_urban_frac_model$coefficients[1])
+```
 
 
 
