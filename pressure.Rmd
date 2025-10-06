@@ -122,7 +122,7 @@ ggplot(systol_urban_frac_df) +
 
 
 ## Exercise 8
-
+The points above and below the line are roughly evenly spread across the range of urban_frac_life. The vertical variability does not noticeably increase or decrease as urban_frac_life changes. Therefore, the model meets the condition of constant variability.
 
 
 
