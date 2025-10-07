@@ -1,0 +1,93 @@
+---
+title: "Lab 5: Data cleaning"
+author: "Ruihan He"
+date: "10-7-2025"
+documentclass: article
+geometry: margin=1in
+fontsize: 11pt
+output:
+  pdf_document:
+    toc: false
+    df_print: kable
+    fig_caption: false
+    number_sections: false
+    highlight: tango
+    dev: pdf
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+# Set knitr options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  eval = TRUE,
+  cache = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 5,
+  fig.asp = 0.618,
+  fig.align = "center",
+  out.width = "80%",
+  dpi = 120
+)
+# Load required packages
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(lubridate))
+# Load dataset
+towed <- read_rds("towed_vehicles.rds")
+```
+
+## Exercises
+
+### Exercise 1
+
+
+
+
+### Exercise 2
+
+
+
+
+### Exercise 3
+
+
+
+
+### Exercise 4
+
+
+
+
+### Exercise 5
+
+
+
+
+### Exercise 6
+
+
+
+
+### Exercise 7
+
+
+
+
+### Exercise 8
+
+
+
+
+## Additional questions
+
+### Question 1
+
+
+
+
+### Question 2
+
+
+
+
