@@ -74,6 +74,11 @@ towed_renamed_2 <- towed_renamed %>%
 
 
 ### Exercise 3
+```{r}
+tow_make_count <- towed_renamed_2 %>%
+  count(make, sort = TRUE) 
+```
+
 unique value:nrow(tow_make_count)
 count of 1:tow_make_count %>% filter(n == 1)
 
@@ -81,6 +86,19 @@ count of 1:tow_make_count %>% filter(n == 1)
 
 
 ### Exercise 4
+```{r}
+tow_make_count_1 <- tow_make_count %>%
+  slice(1:20)
+
+tow_make_count_2 <- tow_make_count %>%
+  slice(21:40)
+
+tow_make_count_3 <- tow_make_count %>%
+  slice(41:60)
+
+tow_make_count_4 <- tow_make_count %>%
+  slice(61:n()) 
+```
 
 
 
