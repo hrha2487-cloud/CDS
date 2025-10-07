@@ -62,6 +62,13 @@ towed_renamed <- towed %>%
 
 
 ### Exercise 2
+```{r}
+library(lubridate)
+library(tidyverse)
+
+towed_renamed_2 <- towed_renamed %>%
+  mutate(tow_date = mdy(tow_date))
+```
 
 
 
