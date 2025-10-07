@@ -40,6 +40,23 @@ towed <- read_rds("towed_vehicles.rds")
 ## Exercises
 
 ### Exercise 1
+```{r}
+library(tidyverse)
+
+towed_renamed <- towed %>%
+  rename(
+    tow_date = `Tow Date`,
+    make = `Make`,
+    style = `Style`,
+    model = `Model`,
+    color = `Color`,
+    plate = `Plate`,
+    state = `State`,
+    towed_to_address = `Towed to Address`,
+    tow_facility_phone = `Tow Facility Phone`,
+    inventory_number = `Inventory Number`
+  )
+```
 
 
 
