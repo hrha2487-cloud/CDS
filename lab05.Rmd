@@ -104,6 +104,37 @@ tow_make_count_4 <- tow_make_count %>%
 
 
 ### Exercise 5
+```{r}
+library(ggplot2)
+
+ggplot(data = tow_make_count_1) +
+  geom_col(mapping = aes(x = fct_rev(make), y = n)) +
+  coord_flip() +
+  xlab("Make") +
+  ylab("Count") +
+  ggtitle("Towed Vehicle Makes (1–20)")
+
+ggplot(data = tow_make_count_2) +
+  geom_col(mapping = aes(x = fct_rev(make), y = n)) +
+  coord_flip() +
+  xlab("Make") +
+  ylab("Count") +
+  ggtitle("Towed Vehicle Makes (21–40)")
+
+ggplot(data = tow_make_count_3) +
+  geom_col(mapping = aes(x = fct_rev(make), y = n)) +
+  coord_flip() +
+  xlab("Make") +
+  ylab("Count") +
+  ggtitle("Towed Vehicle Makes (41–60)")
+
+ggplot(data = tow_make_count_4) +
+  geom_col(mapping = aes(x = fct_rev(make), y = n)) +
+  coord_flip() +
+  xlab("Make") +
+  ylab("Count") +
+  ggtitle("Towed Vehicle Makes (61–end)")
+```
 
 
 
